@@ -8,7 +8,7 @@ const BlogContextProvider = (props) => {
 
     //const name = "billy"
     const [BlogsData, setBlogsData] = useState([]);
-    const server = "http://localhost:8000"
+    const server = "https://blog-cms-rbqp.onrender.com"
 
     const getBlogsData = async () => {
         try {
