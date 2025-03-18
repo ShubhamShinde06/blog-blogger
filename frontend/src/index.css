@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: "Outfit", sans-serif;
+}
+
+body{
+    background-color: black;
+}
+
+ul p:hover{
+    color: orange;
+}
+
+a.active{
+    color: orange;
+}
+
+.main-box{
+    /* box-shadow: inset 80px 80px 80px 50px rgba(0, 0, 0, 0.5);  */
+    box-shadow: rgba(13, 13, 13, 0.25) 80px 80px 80px -12px inset, rgba(0, 0, 0, 0.3) 30px -400px 86px -0px inset;
+}
+
+.text-box{
+    line-height: 25px;
+    white-space:initial; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+}
+
+.text-box-2{
+    line-height: 25px;
+    white-space:initial; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+
+.cursor-box:hover  h1{
+    color:#999999;
+}
+
+.mix-box2::-webkit-scrollbar{
+    display: none;
+}
+
+.blogitembox:hover h2{
+    color: orange;
+}
+
+.blogchildbox{
+    box-shadow: 0px -50px 50px 12px black;
+}
+
+.main-box-shadow{
+    box-shadow: inset 0px -50px 50px 2px black;
+}
+
+.mainmini-img-box:hover h2{
+    color: #FFA500;
+}
+
+.serach-box::-webkit-scrollbar{
+    display: none;
+}
+
+.line-group {
+    margin-bottom: 20px; /* Adds spacing between groups of lines */
+    line-height: 30px;
+}
+  
+
+@media screen and (min-width: 1280px) and (max-width: 1280px) {
+    
+    #text-css{
+        font-size: 22px;
+    }
+
+    #top-p-box{
+        margin-top: 30px;
+    }
+
+    #size-img{
+        width: 350px;
+        height: 230px;
+    }
+
+    #side-text-css{
+        font-size: 11px;
+    }
+
+    #side-com-hight{
+        height: 55vh;
+    }
+    
+}
+
+
+.darksoul-card1
+{
+    display: flex;
+    margin: auto;
+    width: 320px;
+    height: 300px;
+    /* background-color: rgb(255, 255, 255); */
+    /* box-shadow: 5px 5px 60px rgb(235, 235, 235), -5px -5px 60px rgb(237, 237, 237); */
+    border-radius: 15px;
+    transition: all 2s;
+    align-items: start;
+    justify-content: right;
+    font-family: "Grand Hotel", cursive;
+}
+
+.circle1
+{
+    position: absolute;
+    margin: auto;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    border-radius: 0px 15px 0px 50px;
+    transition: all 0.5s;
+    
+}
+.darksoul-card1:hover .circle1
+{
+
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+    width: 320px;
+    height: 300px;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+.darksoul-card1:hover .content
+{
+    color: white;
+}
+.content
+{
+    margin: auto;
+    z-index: 100;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+
+#block {
+    width: 96%;
+    height: 390px;
+    background-image: url("https://images.freeimages.com/images/large-previews/d78/christmas-dogs-1638042.jpg");
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #2bc671;
+    opacity: 0.5;
+  }
+  
+  .link {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border: 2px solid;
+    /*  filter: (opacity=50); */
+  }
+
+
+
+  .button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    background: #FFA500;
+    /* background: #B37201; */
+    color:white;
+    /* padding: 0.30em 0; */
+    font-size: 17px;
+    border: none;
+    border-radius: 0.7em;
+    letter-spacing: 0.08em;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 40px;
+    padding-left: 3em;
+    padding-right: 0.5em;
+  }
+  
+  .button .icon {
+    background:white;
+    margin-right: 2px;
+    height: 35px;
+    width: 35px;
+    border-radius: 0.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.2em;
+    transition: all .7s;
+    gap: 10px;
+    -webkit-transition: all .7s;
+    -moz-transition: all .7s;
+    -ms-transition: all .7s;
+    -o-transition: all .7s;
+}
+  
+  .shere {
+    width: 1.3rem;
+    height: 1.3rem;
+
+  }
+  
+  .button:hover .icon {
+    width: calc(100% - 0.6rem);
+  }
+  
+  .button:hover .shere {
+    width: calc(100% - 0.6rem);
+    display: none;
+  }
+  
+  .button .icon-shere {
+    color:#FFA500;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+  }
+  
+  .button:hover .icon .icon-shere {
+    display: flex;
+  }
+  
