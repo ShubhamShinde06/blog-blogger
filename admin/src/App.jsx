@@ -28,25 +28,25 @@ function App() {
               <Route
                 path="/"
                 element={
-                  // <ProtectedRoute>
+                  <ProtectedRoute>
                     <DashBorad />
-                  // </ProtectedRoute>
+                  </ProtectedRoute>
                 }
               />
               <Route
                 path="/add"
                 element={
-                  // <ProtectedRoute>
+                  <ProtectedRoute>
                     <AddBlog />
-                  // </ProtectedRoute>
+                  </ProtectedRoute>
                 }
               />
               <Route
                 path="/list"
                 element={
-                  // <ProtectedRoute>
+                  <ProtectedRoute>
                     <ShowAllBlog />
-                  // </ProtectedRoute>
+                  </ProtectedRoute>
                 }
               />
 
