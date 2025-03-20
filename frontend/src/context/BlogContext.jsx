@@ -8,21 +8,28 @@ const BlogContextProvider = (props) => {
 
     //const name = "billy"
     const [BlogsData, setBlogsData] = useState([]);
-    const server = "https://blog-cms-rbqp.onrender.com"
+    const [loading,setLoading] = useState(false)
+    const server = "http://localhost:8000"
 
     const getBlogsData = async () => {
+        setLoading(true)
         try {
             const response = await axios.get(server + '/api/blog/list')
             if(response.data.success){
                 setBlogsData(response.data.blogs)
                 console.log(response.data.blogs)
+                setLoading(false)
             }
             else{
                 toast.error(response.data.message)
+                setLoading(false)
             }
         } catch (error) {
             console.log(error)
             toast.error(error.message)
+            setLoading(false)
+        } finally {
+            setLoading(false)
         }
     }
 
@@ -34,7 +41,8 @@ const BlogContextProvider = (props) => {
 
     const value = {
         BlogsData,
-        setBlogsData
+        setBlogsData,
+        loading,setLoading
     }
 
     return(

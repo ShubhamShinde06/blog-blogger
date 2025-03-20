@@ -5,11 +5,11 @@ import { BlogContext } from "../context/BlogContext";
 import BlogHeader from "./BlogHeader";
 import SideBlogCom from "./SideBlogCom";
 import { RiMoneyRupeeCircleFill } from "react-icons/ri";
-import { IoIosSearch } from "react-icons/io";
 import Search from "./Search";
+import { motion } from "framer-motion";
 
 const MixBox = () => {
-  const { BlogsData } = useContext(BlogContext);
+  const { BlogsData, loading } = useContext(BlogContext);
   const selectedTags = ["Tech", "Finance", "Politics"];
   const [filter, setFilter] = useState([]);
 
@@ -31,7 +31,20 @@ const MixBox = () => {
       <BlogHeader tag={"Popular"} icon={<FaMouse />} />
       <div className="w-full lg:h-[90vh] md:flex  pt-5 lg:p-0" id="top-p-box">
         <div className="md:w-[70%] flex flex-col lg:gap-7 mix-box2 items-center justify-center">
-          {filteredData.length > 0 ? (
+          {
+          loading
+          ?
+            [...Array(3)].map((_, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="w-[580px] md:w-[350px] md:h-[150px] lg:w-[580px] h-[250px] lg:h-full"
+              ></motion.div>
+            ))
+          :
+          filteredData.length > 0 ? (
             filteredData.map((item, index) => {
               return (
                 <>
