@@ -8,7 +8,7 @@ import DashBorad from "./pages/DashBorad";
 import Login from "./pages/Login";
 import ProtectedRoute from "./pages/ProtectedRoute";
 
-export const srever = "https://blog-cms-rbqp.onrender.com";
+export const srever = "http://localhost:8000";
 
 function App() {
   const location = useLocation();
